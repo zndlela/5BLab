@@ -1,0 +1,105 @@
+%---------------------------------------------------------------------
+% !TEX root = 5Blman.tex
+%---------------------------------------------------------------------
+% zn: custom pagestyle developed for 5B lab manual. Based on standard LaTeX
+% header:	pg# - chpname chp#. chptitle  || secnum sectitle - pg#
+
+% 2011.2.26 placed \leftmark in chead 
+% 2009.09.09 small modifications
+%---lab pagestyle----------------------------------------------------------
+\makepagestyle{lab}
+\makeatletter
+\makepsmarks{lab}{% setup sectional marks
+	\nouppercaseheads
+	\createmark		{chapter}	{left}{shownumber}{\@chapapp\ }	{. \ }
+	\createmark		{section}	{right}{shownumber}{}			{. \ }
+	\createplainmark	{toc}		{both}{\contentsname}
+	\createplainmark	{lof}		{both}{\listfigurename}
+	\createplainmark	{lot}		{both}{\listtablename}
+	\createplainmark	{bib}		{both}{\bibname}
+	\createplainmark	{index}		{both}{\indexname}
+	\createplainmark	{glossary}	{both}{\glossaryname}
+    } % end makepsmarks
+\makeatother
+
+% setup ruler, headers, no footers, section depth
+\makerunningwidth{lab}{1.1\textwidth}
+\makeevenhead{lab} %
+	{\thepage\hskip1.5em --- \hskip1.5em \leftmark}% lhead
+	{}{} % chead, rhead
+\makeoddhead{lab} % default heading with oneside option
+	{}{\leftmark} % lhead, chead
+%	{\rightmark\hskip1.5em --- \hskip1.5em \thepage} % rhead with twoside opt
+	{\normalsize\textbf\thepage} % rhead with oneside option
+
+%\setsecnumdepth{subsection}		% set toc depth
+\settocdepth{chapter}				% set toc depth
+
+%----Set page layout/page dimensions with memoir features
+% \settypeblocksize{height}{width}{ratio}		% two arguments required
+% \setulmargins{upper}{lower}{ratio}			% one argument required
+% \setlrmargins{spine}{edge}{ratio}			% one argument required
+
+% memoir features used for page size, but geometry package might be better?
+\settypeblocksize{8.5in}{6in}{*}
+\setulmargins{80pt}{*}{*}
+\setlrmargins{1in}{*}{*}
+%\setlrmargins{*}{*}{1.618}
+%\setlength\textheight{42\baselineskip+\topskip} % set #lines on pg to n + 1
+\checkandfixthelayout 
+
+%----lab chapterstyle
+\makeatletter
+\makechapterstyle{lab}{%
+	\chapterstyle{default}
+	
+	\setlength{\beforechapskip}{3.5ex \@plus 1ex \@minus .2ex}
+	\renewcommand*{\chapterheadstart}{\vspace{\beforechapskip}}
+	\setlength{\afterchapskip}{2.3ex \@plus .2ex}
+
+	\renewcommand*{\printchaptername}{\flushleft} % chpname
+	\renewcommand*{\chapnumfont}{\normalfont\LARGE\@chapapp}
+ 
+	\renewcommand*{\printchapternum}{\chapnumfont{%
+		\chapternamenum \thechapter}}
+    
+	\renewcommand*{\chaptitlefont}{\normalfont\Huge\sffamily}
+  
+	\renewcommand*{\printchaptertitle}[1]{% chptitle format
+		\hrule\vskip\onelineskip \raggedleft \chaptitlefont ##1}
+
+	
+	\renewcommand*{\afterchaptertitle}{% space after chptitle
+		\vskip\onelineskip \hrule\vskip \afterchapskip}
+	
+	\setlength{\midchapskip}{1\onelineskip} % space above chptitle
+	\setlength{\afterchapskip}{2\onelineskip} % space after chptitle
+	
+	\renewcommand*{\printchapternonum}{%
+		\vphantom{\chapnumfont}
+	
+	\afterchapternum \vskip\topskip} %
+	}
+\makeatother 
+%--------------------------------------------------------------------------
+\endinput
+%--------------------------------------------------------------------------
+
+%----Set page layout
+% stocksize is set in class option
+\settrimmedsize{11in}{8.5in}{*}		% typeblock 
+% the trims
+\setlength{\trimtop}{0pt} 
+\setlength{\trimedge}{\stockwidth} 
+\addtolength{\trimedge}{-\paperwidth} 
+\setlength{\trimedge}{\stockwidth} 
+\addtolength{\trimedge}{-\paperwidth} 
+\settypeblocksize{8.5in}{6.0in}{*}	% height, width, ratio
+% set upper/lower margins
+\setulmargins{3cm}{*}{*} 				% upper, lower, ratio
+\setlrmargins{1.5in}{*}{*}			% spine, edge, ratio
+% set marginnotes/footer/header space
+\setmarginnotes{17pt}{51pt}{\onelineskip} % sep, width, push
+\setheadfoot{0.5\onelineskip}{2\onelineskip}	% headheight, footskip
+\setheaderspaces{*}{2\onelineskip}{*}			% headdrop, headsep, ratio
+

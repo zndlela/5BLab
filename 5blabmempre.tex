@@ -1,0 +1,68 @@
+%---------------------------------------------------------------------
+% !TEX root = 5Blman.tex
+% 5blabmempre.tex
+%---------------------------------------------------------------------
+% 2010.1.15	added pkgs siunitx, chappg, enumitem
+% 2009.9.16 changes made to streamline the file
+% 2009.1.2
+% preamble 2008.6.22 for 5B Lab using memoir class (standard class also works)
+
+
+\usepackage{amsmath,amssymb}				% math support		
+
+%\usepackage{chappg}			% format chapter pages
+%\pagenumbering{bychapter}	% chappg
+%\renewcommand\chappgsep{ -- }
+
+\DisemulatePackage{enumerate}		% disable memoir emulated package
+\usepackage{enumitem}					% clashes w/paralist pkg
+
+%---------------------------------------------------------------------
+%\usepackage{fancyhdr} 
+%\usepackage[Lenny]{fncychap}	% Lenny, Sonny, Glenn, Rejne, Bjarne, Conny
+%\ChNameVar{\LARGE}				% \huge, \LARGE. Chapter name in fncychap
+%---------------------------------------------------------------------
+
+\usepackage[demo]{graphicx}			% graphics support
+%\graphicspath{{./5bgraf/}}
+
+% use layout pkg to show design of current document. place \layout in body
+% use \setlength and \addtolength cmds to change values
+\usepackage{layout}
+%\usepackage{layouts}
+
+%\usepackage{multicol}			% handle multiple columns
+
+%\usepackage{paralist}			% extended list environment. clashes w/enumitem
+
+\usepackage[ragged]{sidecap}
+
+% in draft mode showkeys, show keys used by \label, \ref, \cite É
+\usepackage{showkeys}
+\usepackage{siunitx}			% typesets numbers and units
+	\sisetup{seperr}			% separates out error part: \num{1.234(5)e6}
+
+\usepackage{subfig}
+
+%\usepackage{tikz}				% graphics -- tikz calls graphicx			
+
+\usepackage{verbatim}
+
+\usepackage{wrapfig}
+
+%---------------------------------------------------------------------
+%\pagestyle{headings}			% standard predefined style
+%\makepagestyle{} % should appear before \checkandfixthelayout. memoir class
+%---------------------------------------------------------------------
+% change default name of chaptername
+\renewcommand{\chaptername}{Experiment}	% 2010 - changed Lab to Expt.
+%\renewcommand{\bibname}{References}
+
+%--marginal note & CK mark--------------------------------------------
+\newcommand{\marnote}[1]{%		 margin note for editorial reminder 
+	\marginpar{\scriptsize To do: \\#1}}
+
+%\newcommand{\CK}[1]{textbf{CK #1}}	% mark text that needs checking
+%---------------------------------------------------------------------
+\endinput
+%---------------------------------------------------------------------

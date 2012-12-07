@@ -1,0 +1,98 @@
+% 5Blman.tex
+%! program = pdflatex
+%--------------------------------------------------------------------------
+% 2012.12.03 first git vcs file
+% 2011.02.15 zn: corrections
+% 2010.01.13 zn: 5Blabsp10. Added pkgs siunitx, chappg. Changed chap heading.
+% 2009.01.06 zn: Revised. Renamed main files as 5Blabsp09.
+% 2008.06.09 zn: 5blabmem built on memoir style
+%	Added appendices including lab instructor notes, lab format, rubric
+% 2009.09.16. Renamed main file as 5BlabF09. uses oneside option.
+%--------------------------------------------------------------------------
+\documentclass[11pt,letterpaper,oneside,draft]{memoir}
+%	draft		% invokes showkeys pkg to display labels, key values, cites 
+%	final 		% default
+%--------------------------------------------------------------------------
+
+%--preamble-----------------------------------------------------------
+\include{5blabmempre}				% set up parameters for preamble
+\include{5blabmemsty}				% set up lab pagestyle and chapter style
+%---------------------------------------------------------------------
+\includeonly{%
+elecstat,
+efield,
+energy,
+dc1,
+dc2,
+induction,
+emrad,
+reflect,
+lenses,
+vision,
+interfere, 
+optical,
+hydrogen,
+nuclear,
+labnotes
+%prelab
+}
+ 
+%--title page---------------------------------------------------------
+%\title{Physics 5B Laboratory Manual} 
+%\author{Department of Physics and Astronomy\\ CSU, Sacramento} 
+%\date{January 2010}
+
+%--------------------------------------------------------------------------
+\begin{document} 
+%--------------------------------------------------------------------------
+\frontmatter
+%\include{5blabmemfront}	% title pgs, copyright, TOC, preface, intro
+ 	
+\include{safety}
+
+%--main matter---------------------------------------------------------
+\mainmatter
+
+%\chapterstyle{lab}
+%\pagestyle{lab}
+
+\include{elecstat}			%--lab 01-------------------------------------
+%\layout
+\include{efield}			%--lab 02-------------------------------------
+ 
+\include{energy}			%--lab 03-------------------------------------
+
+\include{dc1}				%--lab 04-------------------------------------
+
+\include{dc2}				%--lab 05-------------------------------------
+
+\include{induction}		%--lab 06-------------------------------------
+
+\include{emrad}				%--lab 07-------------------------------------
+
+\include{reflect}			%--lab 08-------------------------------------
+
+\include{lenses}			%--lab 09-------------------------------------
+
+\include{vision}			%--lab 10-------------------------------------
+
+\include{optical}			%--lab 11-------------------------------------
+
+\include{interfere}		%--lab 12-------------------------------------
+
+\include{hydrogen}			%--lab 13-------------------------------------
+
+\include{nuclear}			%--lab 14-------------------------------------
+	 
+%--Appendix------------------------------------------------------------
+\appendix
+\include{labnotes}
+
+%--backmatter includes bibliography, index, glossary-------------------
+%\backmatter
+%\bibliographystyle{plainnat}
+%\bibliography{labref}
+
+%--------------------------------------------------------------------------
+\end{document}
+%--------------------------------------------------------------------------
