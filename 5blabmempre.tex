@@ -2,6 +2,7 @@
 % !TEX root = 5Blman.tex
 % 5blabmempre.tex
 %---------------------------------------------------------------------
+% 2012.12.26 added multicol/multicap pkgs + reference defs for equations/figures/tables
 % 2010.1.15	added pkgs siunitx, chappg, enumitem
 % 2009.9.16 changes made to streamline the file
 % 2009.1.2
@@ -31,7 +32,9 @@
 %\usepackage{layout}
 %\usepackage{layouts}
 
-\usepackage{multicol}			% handle multiple columns
+% note that multicol does not support floats. use \includegraphics and multicap pkg for captions
+\usepackage{multicol}			% multiple columns
+\usepackage{multicap}			% \mfcaption[]{} for figs, mtcaption for tables
 
 %\usepackage{paralist}			% extended list environment. clashes w/enumitem
 
@@ -50,6 +53,11 @@
 \usepackage{verbatim}
 
 \usepackage{wrapfig}
+
+%----commands for figure, equation, table referencing
+\newcommand{\reffig}[1]{Figure~(\ref{#1})}
+\newcommand{\refeqn}[1]{Equation~(\ref{#1})}
+\newcommand{\reftable}[1]{Table\,(\ref{#1})}
 
 %---------------------------------------------------------------------
 %\pagestyle{headings}			% standard predefined style
