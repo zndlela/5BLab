@@ -26,6 +26,7 @@
 *.pdfsync
 *.snm
 *.synctex.gz
+*.tmp
 *.toc
 *.top
 *.tui
