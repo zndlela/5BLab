@@ -24,7 +24,7 @@
 %\ChNameVar{\LARGE}				% \huge, \LARGE. Chapter name in fncychap
 %---------------------------------------------------------------------
 
-\usepackage[demo]{graphicx}			% graphics support
+\usepackage{graphicx}			% graphics support. [demo] option displays graphic outline
 %\graphicspath{{./5bgraf/}}
 
 % use layout pkg to show design of current document. place \layout in body
@@ -41,11 +41,12 @@
 \usepackage[ragged]{sidecap}
 
 % in draft mode showkeys, show keys used by \label, \ref, \cite É
-\usepackage{showkeys}
+%\usepackage{showkeys}
 \usepackage{siunitx}			% typesets numbers and units
 %	\sisetup{seperr}			% separates out error part: \num{1.234(5)e6}
 
 \usepackage{subfig}
+\usepackage[expansion=false]{microtype}
 
 %\usepackage{tikz}				% graphics -- tikz calls graphicx			
 %\usepackage[draft]{todonotes}	% show todo notes
