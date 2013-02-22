@@ -4,6 +4,9 @@
 *.aux
 *.bbl
 *.blg
+*.bm
+*.def
+*.dpth
 *.dvi
 *.glg
 *.glo
@@ -13,9 +16,11 @@
 *.ind
 *.ist
 *.lof
+*.lof1
 *.log
 *.lot
 *.maf
+*.md5
 *.mp
 *.mtc
 *.mtc1
@@ -25,10 +30,15 @@
 *.pdf
 *.pdfsync
 *.snm
+*.summ
 *.synctex.gz
+*.tcp
+*.tdo
 *.tmp
 *.toc
+*.toc1
 *.top
+*.tps
 *.tui
 *.vrb
 *(Autosaved).rtfd/  
