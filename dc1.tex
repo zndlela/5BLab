@@ -40,9 +40,9 @@ For resistors in parallel, the total or equivalent resistance $R_P$ is
 	R_P  =  \left (1/R_1  +  1/R_2  +  1/R_3  + \cdots \right)\relax^{-1}
 \end{equation}
 
-\paragraph {Some resistors are marked with colored bands to indicate the resistance they had at the time of manufacture.}  Although reading the color code does not constitute a measurement of resistance which may have changed over time by usage, it is useful to see what the nominal resistance should be.  The first and second colored bands give the first and second digits of the resistance.  The third band gives the power of ten and the fourth band indicates the precision of the manufactured resistance:  5\% for gold and  10\% for silver.
+\paragraph {Color codes.}Some resistors are marked with colored bands to indicate the resistance they had at the time of manufacture.  Although reading the color code does not constitute a measurement of resistance which may have changed over time by usage, it is useful to see what the nominal resistance should be.  The first and second colored bands give the first and second digits of the resistance.  The third band gives the power of ten and the fourth band indicates the precision of the manufactured resistance:  5\% for gold and  10\% for silver.
 
-For example, if the bands are red, blue, green, and silver, the resistance is $26 \times 10^5$ with 10\% precision.
+For example, if the bands are red, blue, green, and gold, the resistance is $26 \times 10^5\,\Omega$ with 5\% precision.
 
 %\begin{table}
 %\caption{Resistor Color Code}
@@ -105,11 +105,21 @@ These activities center on measuring resistance using three different methods. (
 
 \subsection{Activity: Ohm's law} \label{s:ohmlaw}
 \begin{enumerate}
-	\item \label{l:mm} Determine the individual resistances of three different resistors using the multimeter as indicated in \reffig{f:mohm}.
+	\item \label{l:mm} Determine the individual resistances of three different resistors using the multimeter as indicated by \reffig{f:mohm}.
 	
-	\item \label{l:olm}Determine the resistances by the Ohm's law method in which applied voltage and current are measured and the resistance is calculated using  (\refeqn{e:ohm}).  The schematic in \reffig{f:mamblock} indicates how to set up these measurements.
+	\item \label{l:olm}Determine the resistances by the Ohm's law method in which applied voltage and current are measured and the resistance is calculated using \refeqn{e:ohm}.  The block diagram in \reffig{f:mamblock} indicates how to set up these measurements.
 
 	\item Make a table of the voltages and currents measured in item \ref{l:olm} and the resistances calculated from them.  Also list the measured values of resistance found directly with the multimeter from item \ref{l:mm} and those determined from the color code so that you can make side-by-side comparisons.
+	
+%\begin{center}
+\begin{tabularx}{\linewidth}{@{}lllll@{}}
+	\hline
+	V(V)	& I(mA) & $R_{calc}$(\si{\ohm})	& $R_{msrd}$(\si{\ohm}) & $R_{code}$(\si{\ohm}) \\
+	\hline
+\end{tabularx}
+\mtcaption{Ohm law method comparisons}
+%\end{center}
+
 
 	\item Estimate the percent uncertainties in the voltage and current measurements and calculate the percent uncertainty in the resistances found in item \ref{l:olm} with the Ohm's law method.  Do the resistances found by the three different methods for each resistor agree with one another within these experimental uncertainties? If not, discuss why they might disagree.
 	
@@ -134,11 +144,11 @@ These activities center on measuring resistance using three different methods. (
 \begin{enumerate}
 	\item \label{l:eqs} Determine the equivalent resistance of each resistor connected in series using the Ohm's law method. To do this measure the voltage across each resistor separately and the current through it. The current is the same through each resistor. The schematic in \reffig{f:mamblock} shows the measurement of the voltage across and the current through a single resistor. Use  \reffig{f:fig5}. to measure the voltages and current for multiple resistors in series.
 	
-	\item Once you have measured the voltage and current for each resistor separately, calculate the equivalent series resistance $R_S$ using equation \ref{e:ohm}.
+	\item Once you have measured the voltage and current for each resistor separately, calculate the equivalent series resistance $R_S$ using \refeqn{e:ohm}.
 	
 	\item Determine the experimental uncertainty in the value of $R_S$. %found in item \ref{l:eqs}.
 	
-	\item Calculate the equivalent resistance $R_S$ using equation (\ref{e:ser}) where the individual resistances are those found by the Ohm's law method. %in item \ref{l:olm}.
+	\item Calculate the equivalent resistance $R_S$ using \refeqn{e:ser} where the individual resistances are those found by the Ohm's law method. %in item \ref{l:olm}.
 \end{enumerate}
 
 %\begin{figure}
@@ -158,11 +168,11 @@ These activities center on measuring resistance using three different methods. (
 %\end{figure}
 
 \begin{center}
-   {\includegraphics[scale=0.5]{5bgraf/r3series}
-   \label{f:fig5}} % fig_5
-% \hfill
-   {\includegraphics[scale=0.5]{5bgraf/r3parallel}
-   \label{f:fig6}} % fig_6
+   {\includegraphics[scale=1]{5bgraf/r3series2}
+   \label{f:r3series}} % fig_5
+ \vfill
+   {\includegraphics[scale=1]{5bgraf/r3parallel2}
+   \label{f:r3par}} % fig_6
  \mfcaption{Resistors in series and parallel}
  \label{f:serpar}
 \end{center}
@@ -170,11 +180,11 @@ These activities center on measuring resistance using three different methods. (
 
 \subsection{Activity: Resistances in parallel}
 \begin{enumerate}
-	\item Determine the equivalent resistance of three resistors connected in parallel using the Ohm's law method.  Again, review \reffig{f:mamblock} to remind yourself how to measure voltage and current for a single resistor --- use fig. \reffig{f:fig6} for voltage and current measurements of multiple resistors in parallel.
+	\item Determine the equivalent resistance of three resistors connected in parallel using the Ohm's law method.  Again, review \reffig{f:mamblock} to remind yourself how to measure voltage and current for a single resistor --- use \reffig{f:serpar} for voltage and current measurements of multiple resistors in parallel.
 	
 	\item Calculate the equivalent resistance $R_P$ using equation (\ref{e:ohm}) where the individual resistances are those found by the Ohm's law method.
 
-	\item Once you have measured the voltage and current, calculate the equivalent parallel resistance $R_P$ using equation (\ref{e:par}).
+	\item Once you have measured the voltage and current, calculate the equivalent parallel resistance $R_P$ using \refeqn{e:par}.
 	
 	\item Determine the experimental uncertainty in the value of $R_P$.
 \end{enumerate}
@@ -223,10 +233,11 @@ These activities center on measuring resistance using three different methods. (
 \end{center}
 
 
-\paragraph{If time permits}  Using the set-up in \reffig{f:fig5}, measure the voltage drops across each of the three resistors and compare these with the terminal voltage of the dry cell.  Discuss the meaning of your results.
+\paragraph{If time permits}  Using the set-up in \reffig{f:serpar}, measure the voltage drops across each of the three resistors and compare these with the terminal voltage of the dry cell.  Discuss the meaning of your results.
 
 \end{multicols}
 
+\endinput
 
 %\clearpage
 %%\newpage
