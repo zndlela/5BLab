@@ -31,7 +31,65 @@
 %--------------------------------------------------------------------------
 \begin{document}
 %--------------------------------------------------------------------------
-% 3 resistors in series
+%----batteries in series and parallel
+\begin{tikzpicture}[circuit ee IEC]	% in series
+\draw 
+	(0,2) to[battery={info'={$\mathcal E_1$}}](2,2)
+	to[battery={info'={$\mathcal E_2$}}](3,2)
+	(0,0) to[battery={info'={$\mathcal E_1$}}](2,0)
+	(3,0)to[battery={info={$\mathcal E_2$}}](2,0)	
+	;
+\end{tikzpicture}	
+\qquad
+\begin{tikzpicture}[circuit ee IEC] %  in parallel
+\draw	
+	(0,0) -| (0.5,0.5) -- (1,0.5) to[battery={info=$\mathcal E_1$}]
+	(3,0.5) -- (3.5,0.5) |- (4,0)
+	(0.5,0) |- (1,-0.5) to[battery={info'=$\mathcal E_2$}]
+	(3,-0.5) -| (3.5,0);
+\end{tikzpicture}	
+
+%%----single dry cell measurement
+%\begin{tikzpicture}[circuit ee IEC,
+%	set resistor graphic	= var resistor IEC graphic,
+%	meter/.style={circle,draw}]
+%\draw 
+%	(0,2) to[battery={info'={$\mathcal E$}}](0,0)
+%%	(0,2) -- (3,2)										% top line
+%	(0,0) -- (3,0)										% bottom line
+%	(3,1) node[meter](voltmeter)	{$V$}	 			% location of V	
+%	(0,2) to[make contact] (3,2)
+%	(3,2) -- (voltmeter) -- (3,0);
+%\end{tikzpicture}
+
+%----schematic for ohm's law measurement
+%\begin{tikzpicture}[circuit ee IEC,
+%	set resistor graphic	= var resistor IEC graphic,
+%	meter/.style={circle,draw}]
+%\draw (0,3) to[battery={info'={$\mathcal E$}}](0,0)
+%		(0,3) to[make contact] (2,3) 
+%%		(3,3) node[meter](ammeter){$A$}(4,3)		% top line 
+%		(0,0) -- (4,0);									% bottom line
+%\draw
+%	(2,2.3) node[meter](ammeter)		{$A$}			% location of A
+%	(4,0.9) node[meter](voltmeter)	{$V$}; 		% location of V
+%\draw (2,3)--(ammeter) to[resistor={info'={$R$}}] (2,0)	% A,R vertical
+%		(2,1.8)-|(voltmeter) -- (4,0);					% V vertical
+%\end{tikzpicture}
+
+%\begin{tikzpicture}[circuit ee IEC,
+%	set resistor graphic	= var resistor IEC graphic,
+%	meter/.style={circle,draw}]
+%\draw 
+%	(0,2) to[battery={info'={$\mathcal E$}}](0,0)
+%	(2.4,2) node[meter](ammeter){$A$}				% location of A
+%	(4.5,1) node[meter](voltmeter)	{$V$}	 		% location of V	
+%	(0,2) to[make contact] (2,2) -- (ammeter) -- (3.5,2)
+%	(3.5,2) to[resistor={info'=$R$}] (3.5,0)
+%	(3.5,2) -| (voltmeter) |- (0,0);
+%\end{tikzpicture}
+
+%----3 resistors in series
 %\begin{tikzpicture}[circuit ee IEC,set resistor graphic=var resistor IEC graphic]
 %	\draw (0,0)
 %		to[resistor={info'=$R_1$}]			(1.5,0)
@@ -47,13 +105,13 @@
 %\end{tikzpicture}
 %\hfill
 % 3 resistors in parallel
-\begin{tikzpicture}[circuit ee IEC,set resistor graphic=var resistor IEC graphic]
-	\draw (0,0) to[resistor={info=$R_1$}]	(0,1.5)
-		(2,1.5 ) to[resistor={info'=$R_2$}]		(2,0)
-		(4,1.5) to[resistor={info'=$R_3$}]		(4,0)
-		(-1,0) -- (4,0)
-		(-1,1.5) -- (4,1.5);
-\end{tikzpicture}
+%\begin{tikzpicture}[circuit ee IEC,set resistor graphic=var resistor IEC graphic]
+%	\draw (0,0) to[resistor={info=$R_1$}]	(0,1.5)
+%		(2,1.5 ) to[resistor={info'=$R_2$}]		(2,0)
+%		(4,1.5) to[resistor={info'=$R_3$}]		(4,0)
+%		(-1,0) -- (4,0)
+%		(-1,1.5) -- (4,1.5);
+%\end{tikzpicture}
 
 
 %--------------------------------------------------------------------------
