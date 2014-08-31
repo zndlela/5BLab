@@ -5,22 +5,26 @@
 % !TEX root = 5Blab.tex
 \chapter{The Hydrogen Spectrum}
 
+\begin{multicols}{2}
+%---------------------------------------------------------------------
 \section{Purpose}
   The purpose of these laboratory exercises is to measure the wavelengths of hydrogen spectral lines in the visible part of its spectrum.  This will also provide you with further hands-on experience in observing interference and diffraction effects produced by a diffraction grating.
 
+%---------------------------------------------------------------------
 \section{Preparation}
   We use a diffraction grating in this exercise. Pay particular attention to the conditions that produce constructive interference for light passed through a diffraction grating.
   
+%---------------------------------------------------------------------
 \section{General Information}
 The following explains how we can obtain wavelengths using the diffraction grating and how we can calculate those wavelengths from atomic theory.
 When light is passed through a diffraction grating an interference pattern gives constructive interference at angles  related to the wavelength  of the light and the separation $d$ of the slits.  The equation for this is
 
 \begin{equation} \label{e:nfere} 
 	d\cdot \sin\theta = m\cdot \lambda, \quad m = 0, 1, 2, \dots
-\end {equation}
+\end{equation}
 
-In our experiment we will observe the first order spectrum; that is, the spectrum for $m = 1$.  You will find a value for $d$ and measure the angles  for the observable spectral lines from a hydrogen discharge tube.  Experimental values of  can then be calculated using equation (\ref{e:nfere}).
-Atomic theory produces the following equation for the wavelengths of light emitted by hydrogen atoms.  Theoretical values of $\lambda$ are calculated using equation (\ref{e:balmer}).
+In our experiment we will observe the first order spectrum; that is, the spectrum for $m = 1$.  You will find a value for $d$ and measure the angles  for the observable spectral lines from a hydrogen discharge tube.  Experimental values of  can then be calculated using \refeqn{e:nfere}.
+Atomic theory produces the following equation for the wavelengths of light emitted by hydrogen atoms.  Theoretical values of $\lambda$ are calculated using the Balmer \refeqn{e:balmer}.
 
 \begin{equation}\label{e:balmer}
 	\frac{1}{\lambda}= R\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)
@@ -28,6 +32,7 @@ Atomic theory produces the following equation for the wavelengths of light emitt
 
 where $R = 1.097 \times 10^7/m$ is the Rydberg constant.  The symbols $n_f$ and $n_i$ are positive integers that represent electron orbits in the hydrogen atom.  If an electron makes a transition between orbits then $n_i$ represents the initial orbit and $n_f$ the final orbit.  For light (EM radiation, actually) to be omitted $n_i$ must be greater than $n_f$.  Visible radiation is obtained for orbits that end in the second orbit where $n_f = 2$.  The values of $n_i$ can thus be 3, 4, 5, 6\dots .  This is called the Balmer series.
 
+%---------------------------------------------------------------------
 \section{Atomic Spectra}
 
 \subsection{Activity: Spectrometer calibration}
@@ -45,7 +50,7 @@ where $R = 1.097 \times 10^7/m$ is the Rydberg constant.  The symbols $n_f$ and 
 	
 	\item Record the zero angle reading of the spectrometer
 	
-	When looking directly at the hydrogen discharge tube, the spectrometer is at 0 degrees according to equation (\ref{e:nfere}) above.  Your instructor will help you to adjust the spectrometer so that it reads 0 degrees under this condition.
+	When looking directly at the hydrogen discharge tube, the spectrometer is at 0 degrees according to  \refeqn{e:nfere} above.  Your instructor will help you to adjust the spectrometer so that it reads 0 degrees under this condition.
 \end{enumerate}
 
 \subsection{Activity: Measuring spectral lines}
@@ -64,22 +69,23 @@ where $R = 1.097 \times 10^7/m$ is the Rydberg constant.  The symbols $n_f$ and 
 \begin{enumerate}
 	\item Calculate the experimental values for the wavelengths
 	
-	Average the two angles obtained for each line and then use equation (\ref{e:nfere}) to calculate the wavelength.  Estimate the experimental uncertainties in $d$ and find the total percent uncertainty in each.  Add these percent uncertainties to obtain the total percent uncertainty in your measurements.
+	Average the two angles obtained for each line and then use \refeqn{e:nfere} to calculate the wavelength.  Estimate the experimental uncertainties in $d$ and find the total percent uncertainty in each.  Add these percent uncertainties to obtain the total percent uncertainty in your measurements.
 	\item Calculate the theoretical values of the wavelengths
 	
-	Using equation (\ref{e:balmer}) calculate the theoretical values of the wavelengths of the first four lines in the Balmer series.  These have $n_f$ = 2 and $n_i$ = 3, 4, 5, and 6.
+	Using \refeqn{e:balmer} calculate the theoretical values of the wavelengths of the first four lines in the Balmer series.  These have $n_f$ = 2 and $n_i$ = 3, 4, 5, and 6.
 	\item Compare experiment and theory
 	
 	Find the percent difference between the experimental and theoretical values for each of the wavelengths observed. Determine and discuss whether there is agreement within experimental uncertainty. 
 \end{enumerate}
-
+\end{multicols} 
+%---------------------------------------------------------------------
 \section{Conclusions}
 Did today's laboratory exercise succeed in giving you a feeling for interference produced by diffraction gratings and their use as a spectroscopic tool?  What other conclusions can you reach regarding this laboratory exercise?
 
 % \clearpage
 %\newpage
 %\includegraphics*[width=\textwidth,trim=120 80 80 120,clip]{5bgraf/pslabgrid} 
- 
+
 %--------------------------------------------------------------------------
 \endinput
 %--------------------------------------------------------------------------

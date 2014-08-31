@@ -1,22 +1,28 @@
 %--------------------------------------------------------------------------
 % !TEX root = 5Blman.tex
 % emrad.tex
+% 2013.01.07 changed to 2col format
 %--------------------------------------------------------------------------
 \chapter{Electromagnetic Radiation}
 
+\begin{multicols}{2}
+%---------------------------------------------------------------------
 \section{Purpose}
   The purpose of this laboratory exercise is to explore both the wave and photon nature of electromagnetic radiation.  In the process you will manipulate and observe several distinct types of electromagnetic radiation ranging from microwaves to x rays, thereby gaining a hands-on familiarity with these entities.
 
+%---------------------------------------------------------------------
 \section{Preparation}
   Read the sections in your text and become familiar with the electromagnetic spectrum before coming to lab.  Note the definitions of the various types of electromagnetic waves.  Pay special attention to the effects of these waves, the manner in which they are created, and how they may be detected.
 
 \paragraph{Short quiz}
   Be prepared to take a short quiz for which you need to be familiar with the major categories of electromagnetic waves and their properties.
+%---------------------------------------------------------------------
 \section{General Information}
 
 Your instructor will explain the operation of the numerous pieces of apparatus in the room.  There is only one station for each activity so you will circulate about the room to perform this lab.  You may perform the activities in any order.
 Your instructor will also summarize the wave and photon characteristics of electromagnetic radiation.
 
+%---------------------------------------------------------------------
 \section{Exploring EM radiation}
 Perform each of the following activities.  Be certain to keep good records of your observations and to answer the specific questions posed.  Note anything that you observe in addition to what is mentioned in this write up.  Such observations may be at least as important as those you are asked to make.
 
@@ -87,7 +93,7 @@ The photoelectric effect is the only observation in today's laboratory exercise 
 	
 \subsection {X-rays}
 X-rays are produced when energetic electrons strike a material.  Inner shell electrons are ejected from some atoms when the incoming electrons strike them.  When another electron fills the hole left, an x-ray is produced.  Cathode ray tubes (such as those in televisions and computer monitors) have energetic electrons that cause a screen to glow.  X-rays are also produced and must be shielded to protect the observer.  Our cathode ray tube is not shielded so you can observe the x-rays it produces.  The intensity of the x-rays is too small to be harmful.
-\begin{enumerate}
+\begin{enumerate}[itemsep=0pt]
 	\item Describe how you observe the x rays produced by the cathode ray tube.  Does their detection imply the existence of photons?  Explain.
 	\item Where do the x-rays seem to originate?
 	\item Demonstrate that the x-rays can be shielded against.
@@ -95,34 +101,58 @@ X-rays are produced when energetic electrons strike a material.  Inner shell ele
 	\item What precautions are used to protect humans from x-rays produced by televisions and x-ray machines?  Note that all protection involves various combinations of shielding, distance, and time limitation of exposure.
 \end{enumerate}
 
+%---------------------------------------------------------------------
 \section{Conclusions}
   For which types of electromagnetic radiation did you observe wave characteristics?  For which did you observe photon characteristics?\\
-\hrule 
-\begin{table}[b]
-\begin{minipage}{0.4\textwidth} 
-\centering
-\caption{Microwave Peak Signal} \label{t:microwavesignal}
-\begin{tabular}{l l l}\toprule
-\# & X(cm) & Signal\\
-\midrule
+%\hrule 
+%\begin{table}[b]
+%\begin{minipage}{0.4\textwidth} 
+%\centering
+%\caption{Microwave Peak Signal} \label{t:microwavesignal}
+%\begin{tabular}{l l l}\toprule
+%\# & X(cm) & Signal\\
+%\midrule
+%1.	&	2.84 &	max\\
+%2.	&	3.59 &	min\\
+%3.	&	4.31	 &	max	\\
+%4.	&	5.09 &	min\\
+%5.	&	5.86 &	max\\
+%6.	&	6.57	 &	min\\
+%7.	&	7.36 &	max\\
+%8.	&	8.14 &	min\\
+%9.	&	8.85 &	max\\
+%10.	& 	9.55 &	min\\
+%\bottomrule
+%\end{tabular}
+%\end{minipage} \hfill
+
+\begin{center}
+%\begin{table}[b]
+\begin{tabularx}{0.8\linewidth}{@{}XXr@{}}
+	\hline
+	\# & X(cm) & Signal\\
+	\hline
 1.	&	2.84 &	max\\
 2.	&	3.59 &	min\\
-3.	&	4.31	 &	max	\\
+3.	&	4.31 &	max	\\
 4.	&	5.09 &	min\\
 5.	&	5.86 &	max\\
-6.	&	6.57	 &	min\\
+6.	&	6.57 &	min\\
 7.	&	7.36 &	max\\
 8.	&	8.14 &	min\\
 9.	&	8.85 &	max\\
 10.	& 	9.55 &	min\\
-\bottomrule
-\end{tabular}
-\end{minipage} \hfill
-\begin{minipage}{0.5\textwidth} 
-The values shown in Table \ref{t:microwavesignal} display the results from a microwave setup. The displacement values, x, are measured along a straight line between the microwave transmitter and receiver. The signal values represent the locations where the voltage strength reaches a minima or maxima. For example, the value x = 2.84 cm indicates the location where the voltage reading is a maxima whereas the location x = 3.59 cm represents a location where the voltage reading is a minima. From these values you can determine the wavelength.
-\end{minipage}
-\end{table}
+\end{tabularx}
+\mtcaption{Microwave Peak Signal} \label{t:microwavesignal}
+%\end{table}
+\end{center}
 
+%\begin{minipage}{0.5\textwidth} 
+The values shown in Table \ref{t:microwavesignal} display the results from a microwave setup. The displacement values, x, are measured along a straight line between the microwave transmitter and receiver. The signal values represent the locations where the voltage strength reaches a minima or maxima. For example, the value x = 2.84 cm indicates the location where the voltage reading is a maxima whereas the location x = 3.59 cm represents a location where the voltage reading is a minima. From these values you can determine the wavelength.
+%\end{minipage}
+%\end{table}
+
+\end{multicols}
 %--------------------------------------------------------------------------
 \endinput
 %--------------------------------------------------------------------------

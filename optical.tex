@@ -1,20 +1,30 @@
 %--------------------------------------------------------------------------
 % !TEX root = 5Blman.tex
 % optical.tex
+% 2013.01.06 changed to 2col format
 %--------------------------------------------------------------------------
 \chapter{Optical Instruments}
 
+\begin{multicols}{2}
+%---------------------------------------------------------------------
 \section{Objective}
 To apply the principles of angular magnification and lateral magnification to the astronomical refracting telescope and the compound microscope. Both the telescope and the microscope utilize the lens systems called the eyepiece (near the viewing eye) and the objective (near the object being magnified).
 
+%---------------------------------------------------------------------
 \section{The eyepiece} For this experiment the eyepiece will consist of a single converging lens which we will call a ``simple magnifier'' The simple magnifier magnifies an object by creating a virtual image which subtends a greater angle at the eye than the original object.
 
-\begin{figure} %{wrapfigure}[8]{r}[30pt]{3cm}	
-  \centering
+%\begin{figure} %{wrapfigure}[8]{r}[30pt]{3cm}	
+%  \centering
+%  \includegraphics[scale=0.7]{5bgraf/mag}
+%  \caption{Leaf viewed (a)through a magnifier (b)with the unaided eye}
+%  \label{f:mag}
+%\end{figure} %{wrapfigure}
+
+\begin{center}
   \includegraphics[scale=0.7]{5bgraf/mag}
-  \caption{Leaf viewed (a)through a magnifier (b)with the unaided eye}
+  \mfcaption{Leaf viewed (a)through a magnifier (b)with the unaided eye}
   \label{f:mag}
-\end{figure} %{wrapfigure}
+\end{center}
 
 
 This results in a larger image on the retina, hence the object ``appears'' larger. The amount the object appears to be larger is defined by the angular magnification or magnifying power of the lens.
@@ -58,15 +68,23 @@ $f_e$ = focal length of the simple magnifier eyepiece
 
 Note: Images formed by the eyepiece are virtual and upright, hence a simple magnifier can be used for reading purposes.
 
+%---------------------------------------------------------------------
 \section{The Refracting Astronomical Telescope}
-A simple refracting telescope is illustrated in fig. \ref{f:tscope}
+A simple refracting telescope is illustrated in \reffig{f:tscope}
 
-\begin{figure}[htb] %{wrapfigure}[10]{r}[30pt]{3cm}	
-  \centering
+%\begin{figure}[htb] %{wrapfigure}[10]{r}[30pt]{3cm}	
+%  \centering
+%  \includegraphics[scale=0.7]{5bgraf/tscope}
+%  \caption{Refracting telescope}
+%  \label{f:tscope}
+%\end{figure} %{wrapfigure}
+
+\begin{center}
   \includegraphics[scale=0.7]{5bgraf/tscope}
-  \caption{Refracting telescope}
+  \mfcaption{Refracting telescope}
   \label{f:tscope}
-\end{figure} %{wrapfigure}
+\end{center}
+
 
 The features of this device are outlined as follows:
 \begin{enumerate}
@@ -85,14 +103,21 @@ Using trigonometric approximations you can confirm that the total magnifying pow
 where the minus sign indicates that the image is `inverted'. It is assumed that the final image is at infinity.
 
 \section{The Compound Microscope}
-A simple compound microscope is illustrated in fig. \ref{f:mscope}:
+A simple compound microscope is illustrated in \reffig{f:mscope}:
 
-\begin{figure} [htb] %{wrapfigure}[8]{r}[20pt]{5cm}	
-  \centering
+%\begin{figure} [htb] %{wrapfigure}[8]{r}[20pt]{5cm}	
+%  \centering
+%  \includegraphics[scale=0.6]{5bgraf/mscope}
+%  \caption{Compound microscope}
+%  \label{f:mscope}
+%\end{figure} %{wrapfigure}
+
+\begin{center}
   \includegraphics[scale=0.6]{5bgraf/mscope}
-  \caption{Compound microscope}
+  \mfcaption{Compound microscope}
   \label{f:mscope}
-\end{figure} %{wrapfigure}
+\end{center}
+
 
 The features of this device are outlined as follows:
 \begin{enumerate}
@@ -112,6 +137,7 @@ Thus, the overall magnification of the microscope is
 \end{equation}
 
 
+%---------------------------------------------------------------------
 \section{Building optical instruments}
 \subsection{Activity: Find the focal lengths}
 \begin{enumerate}
@@ -124,7 +150,7 @@ Thus, the overall magnification of the microscope is
 \begin{enumerate}
 	 \item Mount a ruler in a vertical position on the optical bench. Use the simple magnifier to observe the magnified image of the ruler markings, as seen through the simple magnifier.
 	 \item  Devise a way to measure the size of the image seen through the magnifier. Then compare the actual size of the ruler marking with the size as seen through the simple magnifier. 
-	 \item Compare your experimental observations with that predicted from equations in \ref{e:mag}.
+	 \item Compare your experimental observations with that predicted from equations in \refeqn{e:mag}.
 \end{enumerate}
 
 \subsection{Activity: Build a telescope}
@@ -133,7 +159,7 @@ Thus, the overall magnification of the microscope is
 \begin{enumerate}
 	\item Mount your eyepiece and objective lens for your telescope on your optical bench. Remember that you need an objective lens with a long focal length for a telescope. The distance between your lenses should be about the sum of their focal lengths.
 	\item Sight your telescope on a distant object (on the other side of the room or outside). You might need to adjust the separation of your lenses to get a good image. 
-	\item Estimate the magnification of the image, and then compare your results with the expected angular magnification, predicted by equation \ref{e:tscope}.
+	\item Estimate the magnification of the image, and then compare your results with the expected angular magnification, predicted by \refeqn{e:tscope}.
 \end{enumerate}
 
 \subsection{Activity: Build a microscope}
@@ -141,13 +167,15 @@ Thus, the overall magnification of the microscope is
 
 \begin{enumerate}
 	\item Mount your eyepiece and objective lens for your microscope on your optical bench. Remember that you need an objective lens with a short focal length for a microscope. The distance between your lenses should be longer than the sum of their focal lengths.
-	\item Sight your microscope on a small object placed near the objective, just outside of the focal length of the objective. The distance scale on your screen is one possible object to start with. Again, estimate the overall magnification for your microscope and compare it with the expected value predicted by equation \ref{e:mscope}.
+	\item Sight your microscope on a small object placed near the objective, just outside of the focal length of the objective. The distance scale on your screen is one possible object to start with. Again, estimate the overall magnification for your microscope and compare it with the expected value predicted by \refeqn{e:mscope}.
 \end{enumerate}
 
+%---------------------------------------------------------------------
 \section{Question} 
 The size of the image of Jupiter as seen through a telescope is definitely
 smaller than the actual planet, ($h_{image} < h_{object}$ ), yet we say that the telescope has provided magnification. Explain what is being magnified.
- 
+
+\end{multicols}
 %--------------------------------------------------------------------------
 \endinput
 %--------------------------------------------------------------------------

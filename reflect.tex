@@ -1,12 +1,16 @@
 %--------------------------------------------------------------------------
 % !TEX root = 5Blman.tex
 % reflect.tex
+% 2013.01.08 changed to 2col format
 %--------------------------------------------------------------------------
 \chapter{Reflection and Refraction}
 
+\begin{multicols}{2}
+%---------------------------------------------------------------------
 \section{Purpose}
   The purpose of these laboratory exercises is to give you hands-on experience with the two basic laws of geometrical optics the laws of reflection and refraction. This lab continues the study of light, in particular the ray nature of light when light interacts with objects that are much larger than its wavelength.
   
+%---------------------------------------------------------------------
 \section{Preparation}
 Note the definitions of important concepts in your text.  Pay particular attention to the laws of reflection and refraction.  Be certain you are comfortable with the ray model of light and the manner in which angles are denoted to specify the direction of a light ray.
 \paragraph{Short quiz}
@@ -20,16 +24,23 @@ We use lasers in this laboratory exercise because they produce a narrow beam of 
  
 To measure the direction of a ray of light produced by a laser we use the set up shown here schematically.
 
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.8]{5bgraf/fig_14}
-	\caption{Laser on optical bench}
+%\begin{figure}
+%	\centering
+%	\includegraphics[scale=0.8]{5bgraf/fig_14}
+%	\caption{Laser on optical bench}
+%	\label{f:fig14}
+%\end{figure}
+
+\begin{center}
+	\includegraphics[scale=0.6]{5bgraf/fig_14}
+	\mfcaption{Laser on optical bench}
 	\label{f:fig14}
-\end{figure}
+\end{center}
+
 
 An optical bench is used to provide firm support for the laser and the platform on which measurements are made.  Align the laser and platform so that the beam is parallel to the surface of the platform.  Place a cork pad on the platform and a sheet of paper on top of the cork.  Pins placed judiciously can then be used to trace the path of the laser beam.
 
-The law of reflection is particularly simple.  It is illustrated in the fig. {\ref{f:fig15}  The angle of incidence $\theta_i$ equals the angle of reflection $\theta_r$.  The law of refraction governs the direction of light rays when their speed changes, as in passing from one medium to another.  It is illustrated in fig. \ref{f:fig16}.  The equation for the law of refraction is called Snell's law and is written
+The law of reflection is particularly simple.  It is illustrated in the \reffig{f:fig15}  The angle of incidence $\theta_i$ equals the angle of reflection $\theta_r$.  The law of refraction governs the direction of light rays when their speed changes, as in passing from one medium to another.  It is illustrated in \reffig{f:fig16}.  The equation for the law of refraction is called Snell's law and is written
 \begin {equation} \label{e:snell}
 n_1 \ \text{sin} \ \theta_1 = n_2 \ \text{sin} \ \theta_2
 \end {equation}
@@ -52,17 +63,27 @@ where $n_1$ and $n_2$ are the indices of refraction for the media involved.
 %\end{figure}
 %\end{comment}
 
-\begin{figure} \centering
- \subfloat[reflection]
-   {\includegraphics[scale=0.9]{5bgraf/fig_15}\label{f:fig15}}
- \qquad \qquad
- \subfloat[refraction]
-   {\includegraphics[scale=0.9]{5bgraf/fig_16}\label{f:fig16}}
- \caption{Laws of Reflection and Refraction}\label{f:rfract}
-\end{figure}
+%\begin{figure} \centering
+% \subfloat[reflection]
+%   {\includegraphics[scale=0.9]{5bgraf/fig_15}\label{f:fig15}}
+% \qquad \qquad
+% \subfloat[refraction]
+%   {\includegraphics[scale=0.9]{5bgraf/fig_16}\label{f:fig16}}
+% \caption{Laws of Reflection and Refraction}\label{f:rfract}
+%\end{figure}
+
+\begin{center}
+	{\includegraphics[scale=0.9]{5bgraf/fig_15}\label{f:fig15}}
+	{\includegraphics[scale=0.9]{5bgraf/fig_16}\label{f:fig16}}
+	\mfcaption{Laws of Reflection and Refraction}\label{f:rfract}
+	\label{f:fig14}
+\end{center}
+
+
 
 Note that the angles are measured relative to a line that is perpendicular to the surface at the point where the light ray meets the surface.  The perpendicular is shown as a dashed line.  You can use a protractor to draw the perpendicular.  Your instructor will guide you in both determining the perpendicular and measuring pertinent angles.
 
+%---------------------------------------------------------------------
 \section{Geometric optics: ray model}
 
 \subsection{Activity: Reflection and Refraction}
@@ -72,7 +93,7 @@ Note that the angles are measured relative to a line that is perpendicular to th
 
 % Verify the law of refraction
 	\item Partially fill the pie box with water and a small amount of powdered milk. Trace a ray of light as it enters and leaves the pie box.  
-	\item Taking the index of refraction of water to be 1.33 and that of air to be 1.00, check to see if the law of refraction (Snell's law: eqn.\ref{e:snell}) is verified at both the entry and exit points.  As usual, the verification need only be within experimental uncertainties.
+	\item Taking the index of refraction of water to be 1.33 and that of air to be 1.00, check to see if the law of refraction (Snell's law: \refeqn{e:snell}) is verified at both the entry and exit points.  As usual, the verification need only be within experimental uncertainties.
 	\item Discuss your results. Also discuss why your results are not affected by the fact that the light goes through plastic as well as air and water.
 \end{enumerate}
 	
@@ -95,13 +116,14 @@ Pass the ray of light through a prism.  Gradually rotate the prism so that the r
 	 \item Discuss whether $f$ is half the radius of curvature $R$, as is predicted by the law of reflection.
 \end{enumerate}
 	
+%---------------------------------------------------------------------
 \section{Conclusions}
   What general conclusions can you make concerning the laws of reflection and refraction based on your experiences in this lab?
  
 % \clearpage
 %\newpage
 %\includegraphics*[width=\textwidth,trim=120 80 80 120,clip]{5bgraf/pslabgrid} 
- 
+\end{multicols} 
 %--------------------------------------------------------------------------
 \endinput
 %--------------------------------------------------------------------------

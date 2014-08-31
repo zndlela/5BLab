@@ -1,7 +1,8 @@
 % 5Blman.tex
 %! program = pdflatex
 %--------------------------------------------------------------------------
-% 2012.12.03 first git vcs file
+% 2014.08.29 first 'push' to github
+% 2012.12.03 first git vcs file, renamed 5blman.
 % 2011.02.15 zn: corrections
 % 2010.01.13 zn: 5Blabsp10. Added pkgs siunitx, chappg. Changed chap heading.
 % 2009.01.06 zn: Revised. Renamed main files as 5Blabsp09.
@@ -9,7 +10,7 @@
 %	Added appendices including lab instructor notes, lab format, rubric
 % 2009.09.16. Renamed main file as 5BlabF09. uses oneside option.
 %--------------------------------------------------------------------------
-\documentclass[11pt,letterpaper,oneside,draft]{memoir}
+\documentclass[11pt,letterpaper,twoside]{memoir}
 %	draft		% invokes showkeys pkg to display labels, key values, cites 
 %	final 		% default
 %--------------------------------------------------------------------------
@@ -34,7 +35,7 @@ optical,
 hydrogen,
 nuclear,
 labnotes
-%prelab
+prelab
 }
  
 %--title page---------------------------------------------------------
@@ -46,17 +47,17 @@ labnotes
 \begin{document} 
 %--------------------------------------------------------------------------
 \frontmatter
-%\include{5blabmemfront}	% title pgs, copyright, TOC, preface, intro
+\include{5blabmemfront}	% title pgs, copyright, TOC, preface, intro
  	
 \include{safety}
 
 %--main matter---------------------------------------------------------
 \mainmatter
 
-%\chapterstyle{lab}
-%\pagestyle{lab}
+\chapterstyle{lab}
+\pagestyle{lab}
 
-\include{elecstat}			%--lab 01-------------------------------------
+\include{elecstat}		%--lab 01-------------------------------------
 %\layout
 \include{efield}			%--lab 02-------------------------------------
  
@@ -68,7 +69,7 @@ labnotes
 
 \include{induction}		%--lab 06-------------------------------------
 
-\include{emrad}				%--lab 07-------------------------------------
+\include{emrad}			%--lab 07-------------------------------------
 
 \include{reflect}			%--lab 08-------------------------------------
 
@@ -80,13 +81,14 @@ labnotes
 
 \include{interfere}		%--lab 12-------------------------------------
 
-\include{hydrogen}			%--lab 13-------------------------------------
+\include{hydrogen}		%--lab 13-------------------------------------
 
 \include{nuclear}			%--lab 14-------------------------------------
 	 
 %--Appendix------------------------------------------------------------
 \appendix
 \include{labnotes}
+\include{labrpt}
 
 %--backmatter includes bibliography, index, glossary-------------------
 %\backmatter
