@@ -7,9 +7,14 @@
 %{article}
 {standalone}
 %--------------------------------------------------------------------------
+<<<<<<< HEAD
 %\usepackage[american]{circuitikz}
 \usepackage{tikz}
 %	\usetikzlibrary{calc}
+=======
+\usepackage{tikz}
+	\usetikzlibrary{calc}
+>>>>>>> a7fba7a3f6cde200aab2b482244b970ba962c31b
 	\usetikzlibrary{circuits.ee.IEC}
 %	\usetikzlibrary{shapes,decorations,shadows}
 %	\usetikzlibrary{decorations.pathmorphing}
@@ -32,6 +37,7 @@
 %--------------------------------------------------------------------------
 \begin{document}
 %--------------------------------------------------------------------------
+<<<<<<< HEAD
 %----measure internal resistance of battery
 % simple solution uses absolute positioning
 %\begin{tikzpicture}[circuit ee IEC,
@@ -102,6 +108,25 @@
 %	(0.5,0) |- (1,-0.5) to[battery={info'=$\mathcal E_2$}]
 %	(3,-0.5) -| (3.5,0);
 %\end{tikzpicture}	
+=======
+%----batteries in series and parallel
+\begin{tikzpicture}[circuit ee IEC]	% in series
+\draw 
+	(0,2) to[battery={info'={$\mathcal E_1$}}](2,2)
+	to[battery={info'={$\mathcal E_2$}}](3,2)
+	(0,0) to[battery={info'={$\mathcal E_1$}}](2,0)
+	(3,0)to[battery={info={$\mathcal E_2$}}](2,0)	
+	;
+\end{tikzpicture}	
+\qquad
+\begin{tikzpicture}[circuit ee IEC] %  in parallel
+\draw	
+	(0,0) -| (0.5,0.5) -- (1,0.5) to[battery={info=$\mathcal E_1$}]
+	(3,0.5) -- (3.5,0.5) |- (4,0)
+	(0.5,0) |- (1,-0.5) to[battery={info'=$\mathcal E_2$}]
+	(3,-0.5) -| (3.5,0);
+\end{tikzpicture}	
+>>>>>>> a7fba7a3f6cde200aab2b482244b970ba962c31b
 
 %%----single dry cell measurement
 %\begin{tikzpicture}[circuit ee IEC,
@@ -167,6 +192,10 @@
 %		(-1,1.5) -- (4,1.5);
 %\end{tikzpicture}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7fba7a3f6cde200aab2b482244b970ba962c31b
 %--------------------------------------------------------------------------
 \end{document}
 %--------------------------------------------------------------------------
